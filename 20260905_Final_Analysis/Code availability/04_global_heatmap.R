@@ -73,16 +73,35 @@ heatmap_feature_table[, annotation_status := fifelse(
   "Putatively annotated",
   "Unassigned/ambiguous"
 )]
+heatmap_feature_table[, figure_lipid_class := fcase(
+  broad_class == "Glycerolipid candidate", "Glycerolipid",
+  broad_class == "Phosphatidylcholine candidate", "Phosphatidylcholine",
+  broad_class == "Sphingolipid candidate", "Sphingolipid",
+  default = broad_class
+)]
+heatmap_feature_table[, figure_label := fifelse(
+  annotation_status == "Putatively annotated" & nzchar(selected_putative_name),
+  paste0(met_id, " (putative ", selected_putative_name, ")"),
+  met_id
+)]
 
 feature_annotation <- heatmap_feature_table[match(rownames(heatmap_matrix), met_id)]
-status_palette <- c(
-  "Putatively annotated" = "#6A51A3",
-  "Unassigned/ambiguous" = "#BDBDBD"
+lipid_class_palette <- c(
+  "Free fatty acid" = "#E6AB02",
+  "Glycerolipid" = "#D95F02",
+  "Lysophosphatidylcholine" = "#1B9E77",
+  "Phosphatidylcholine" = "#E7298A",
+  "Phosphatidylethanolamine" = "#7570B3",
+  "Phosphatidylglycerol" = "#66A61E",
+  "Sphingolipid" = "#1F9E89",
+  "Sphingomyelin" = "#E76F51",
+  "Ubiquinone" = "#6A3D9A",
+  "Unassigned" = "#BDBDBD"
 )
 row_annotation <- rowAnnotation(
-  `Annotation status` = feature_annotation$annotation_status,
+  `Putative lipid class` = feature_annotation$figure_lipid_class,
   col = list(
-    `Annotation status` = status_palette
+    `Putative lipid class` = lipid_class_palette
   ),
   simple_anno_size = grid::unit(3.5, "mm")
 )
@@ -111,8 +130,8 @@ heatmap_object <- row_annotation + Heatmap(
   clustering_distance_rows = "euclidean",
   clustering_method_rows = "complete",
   show_row_names = TRUE,
-  row_labels = feature_annotation$met_id,
-  row_names_gp = grid::gpar(fontsize = 6),
+  row_labels = feature_annotation$figure_label,
+  row_names_gp = grid::gpar(fontsize = 5.7),
   show_column_names = TRUE,
   column_names_gp = grid::gpar(fontsize = 6),
   column_title_gp = grid::gpar(fontsize = 10, fontface = "bold"),
@@ -123,7 +142,7 @@ heatmap_object <- row_annotation + Heatmap(
 
 png(
   file.path(figure_directory, "04_all_selected_features_heatmap.png"),
-  width = 15, height = 11, units = "in", res = 300, type = "cairo-png"
+  width = 17, height = 11.5, units = "in", res = 300, type = "cairo-png"
 )
 drawn_heatmap <- draw(
   heatmap_object,
@@ -134,7 +153,7 @@ dev.off()
 
 pdf(
   file.path(figure_directory, "04_all_selected_features_heatmap.pdf"),
-  width = 15, height = 11, useDingbats = FALSE
+  width = 17, height = 11.5, useDingbats = FALSE
 )
 draw(heatmap_object, heatmap_legend_side = "right", annotation_legend_side = "right")
 dev.off()
@@ -176,8 +195,9 @@ analysis_summary <- data.table(
   ),
   value = as.character(c(
     nrow(heatmap_matrix), ncol(heatmap_matrix), "complete linkage",
-    "not clustered", "passage, day, biological replicate", "MET identifiers",
-    "putatively annotated versus unassigned/ambiguous"
+    "not clustered", "passage, day, biological replicate",
+    "MET identifiers with putative compound names where assigned",
+    "putative lipid class"
   ))
 )
 fwrite(analysis_summary, file.path(table_directory, "04_global_heatmap_summary.csv"), bom = TRUE)
