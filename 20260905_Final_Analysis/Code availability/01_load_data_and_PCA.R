@@ -101,22 +101,39 @@ parse_samples <- function(sample_names) {
   is_qc <- grepl("_QC_[0-9]+$", sample_names)
   if (any(!is_biological & !is_qc)) stop("Unexpected LC-MS sample names")
   metadata <- data.table(
-    injection = sample_names,
+    input_injection = sample_names,
     sample_type = fifelse(is_qc, "QC", "Biological"),
     passage = NA_character_, day_numeric = NA_integer_,
     biological_replicate = NA_integer_, injection_replicate = NA_integer_
   )
-  metadata[is_biological, passage := vapply(parts[is_biological], `[[`, character(1), 2)]
+  passage_lookup <- c(
+    P11 = "Early Passage",
+    P22 = "Middle Passage",
+    P33 = "Late Passage"
+  )
+  metadata[is_biological, passage := passage_lookup[
+    vapply(parts[is_biological], `[[`, character(1), 2)
+  ]]
   metadata[is_biological, day_numeric := as.integer(vapply(parts[is_biological], `[[`, character(1), 3))]
   metadata[is_biological, biological_replicate := as.integer(vapply(parts[is_biological], `[[`, character(1), 4))]
   metadata[is_biological, injection_replicate := as.integer(vapply(parts[is_biological], `[[`, character(1), 5))]
   metadata[, biological_sample := fifelse(
     sample_type == "Biological",
-    sprintf("%s_D%d_R%02d", passage, day_numeric, biological_replicate),
+    sprintf("%s_D%d_R%02d", gsub(" ", "_", passage), day_numeric, biological_replicate),
     NA_character_
   )]
   metadata[, day := fifelse(sample_type == "Biological", paste0("D", day_numeric), NA_character_)]
-  metadata[, condition := fifelse(sample_type == "Biological", paste0(passage, "_", day), NA_character_)]
+  metadata[, condition := fifelse(
+    sample_type == "Biological",
+    paste0(sub(" Passage$", "", passage), "_", day),
+    NA_character_
+  )]
+  metadata[sample_type == "Biological", injection := sprintf(
+    "%s_I%02d",
+    biological_sample,
+    injection_replicate
+  )]
+  metadata[sample_type == "QC", injection := sprintf("Pooled_QC_%02d", seq_len(.N))]
   metadata
 }
 
@@ -125,7 +142,7 @@ collapse_injections <- function(matrix, injection_metadata) {
   metadata <- unique(biological[, .(
     biological_sample, passage, day_numeric, day, condition, biological_replicate
   )])
-  metadata[, passage_order := match(passage, c("P11", "P22", "P33"))]
+  metadata[, passage_order := match(passage, c("Early Passage", "Middle Passage", "Late Passage"))]
   setorder(metadata, passage_order, day_numeric, biological_replicate)
   metadata[, passage_order := NULL]
   collapsed <- sapply(metadata$biological_sample, function(sample_id) {
@@ -134,15 +151,14 @@ collapse_injections <- function(matrix, injection_metadata) {
   })
   rownames(collapsed) <- rownames(matrix)
   colnames(collapsed) <- metadata$biological_sample
-  metadata[, passage := factor(passage, levels = c("P11", "P22", "P33"))]
-  metadata[, passage_group := factor(
-    c(P11 = "Early Passage", P22 = "Middle Passage", P33 = "Late Passage")[as.character(passage)],
+  metadata[, passage := factor(
+    passage,
     levels = c("Early Passage", "Middle Passage", "Late Passage")
   )]
   metadata[, day := factor(day, levels = c("D0", "D1", "D3", "D6", "D9"))]
   metadata[, condition := factor(
     condition,
-    levels = as.vector(outer(levels(passage), levels(day), paste, sep = "_"))
+    levels = as.vector(outer(c("Early", "Middle", "Late"), levels(day), paste, sep = "_"))
   )]
   list(matrix = collapsed, metadata = metadata)
 }
@@ -171,6 +187,7 @@ pareto_scale <- function(matrix) {
 
 qi_data <- read_qi_export(input_file)
 injection_metadata <- parse_samples(colnames(qi_data$normalized))
+colnames(qi_data$normalized) <- injection_metadata$injection
 collapsed_data <- collapse_injections(qi_data$normalized, injection_metadata)
 biological_matrix <- collapsed_data$matrix
 sample_metadata <- collapsed_data$metadata
@@ -210,7 +227,7 @@ passage_colors <- c(
   "Late Passage" = "#B24C63"
 )
 day_shapes <- c(D0 = 21, D1 = 22, D3 = 24, D6 = 25, D9 = 8)
-pca_figure <- ggplot(pca_scores, aes(PC1, PC2, color = passage_group, shape = day)) +
+pca_figure <- ggplot(pca_scores, aes(PC1, PC2, color = passage, shape = day)) +
   geom_point(size = 3.2, stroke = 0.9, fill = "white") +
   scale_color_manual(values = passage_colors) +
   scale_shape_manual(values = day_shapes) +
@@ -219,8 +236,14 @@ pca_figure <- ggplot(pca_scores, aes(PC1, PC2, color = passage_group, shape = da
     y = sprintf("PC2 (%.1f%%)", pca_variance_percent[2]),
     color = "Passage", shape = "Day"
   ) +
-  theme_bw(base_size = 10) +
-  theme(panel.grid.minor = element_blank())
+  theme_bw(base_size = 13) +
+  theme(
+    panel.grid.minor = element_blank(),
+    axis.title = element_text(size = 14, face = "bold"),
+    axis.text = element_text(size = 12, face = "bold"),
+    legend.title = element_text(size = 12, face = "bold"),
+    legend.text = element_text(size = 11, face = "bold")
+  )
 
 ggsave(file.path(figure_directory, "01_lipidomics_PCA_biological_samples.png"), pca_figure, width = 6.5, height = 5.2, dpi = 300, bg = "white")
 ggsave(file.path(figure_directory, "01_lipidomics_PCA_biological_samples.pdf"), pca_figure, width = 6.5, height = 5.2, device = cairo_pdf)
@@ -235,7 +258,7 @@ qc_pca_scores <- data.table(
   PC1 = qc_pca_model$x[, 1],
   PC2 = qc_pca_model$x[, 2],
   sample_type = c(rep("Biological", ncol(analysis_abundance)), rep("QC", ncol(qc_matrix))),
-  group = c(as.character(sample_metadata$passage_group), rep("QC", ncol(qc_matrix)))
+  group = c(as.character(sample_metadata$passage), rep("QC", ncol(qc_matrix)))
 )
 qc_pca_scores[, group := factor(
   group,
@@ -251,8 +274,14 @@ qc_pca_figure <- ggplot(qc_pca_scores, aes(PC1, PC2, color = group, shape = samp
     y = sprintf("PC2 (%.1f%%)", qc_pca_variance_percent[2]),
     color = "Group", shape = "Sample type"
   ) +
-  theme_bw(base_size = 10) +
-  theme(panel.grid.minor = element_blank())
+  theme_bw(base_size = 13) +
+  theme(
+    panel.grid.minor = element_blank(),
+    axis.title = element_text(size = 14, face = "bold"),
+    axis.text = element_text(size = 12, face = "bold"),
+    legend.title = element_text(size = 12, face = "bold"),
+    legend.text = element_text(size = 11, face = "bold")
+  )
 
 ggsave(file.path(figure_directory, "01_lipidomics_PCA_with_pooled_QC.png"), qc_pca_figure, width = 8, height = 5.2, dpi = 300, bg = "white")
 ggsave(file.path(figure_directory, "01_lipidomics_PCA_with_pooled_QC.pdf"), qc_pca_figure, width = 8, height = 5.2, device = cairo_pdf)
@@ -289,7 +318,11 @@ pca_summary <- data.table(
   ))
 )
 
-fwrite(injection_metadata, file.path(table_directory, "01_injection_metadata.csv"), bom = TRUE)
+fwrite(
+  injection_metadata[, !"input_injection"],
+  file.path(table_directory, "01_injection_metadata.csv"),
+  bom = TRUE
+)
 fwrite(sample_metadata, file.path(table_directory, "01_sample_metadata.csv"), bom = TRUE)
 fwrite(feature_qc_table, file.path(table_directory, "01_feature_filter_all_features.csv"), bom = TRUE)
 fwrite(feature_qc_table[analysis_filter_pass == TRUE], file.path(table_directory, "01_expression_filter_retained_features.csv"), bom = TRUE)

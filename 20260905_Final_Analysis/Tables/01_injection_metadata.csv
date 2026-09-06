@@ -1,146 +1,146 @@
-﻿injection,sample_type,passage,day_numeric,biological_replicate,injection_replicate,biological_sample,day,condition
-20240830_P11_D0_01_1,Biological,P11,0,1,1,P11_D0_R01,D0,P11_D0
-20240830_P11_D0_01_2,Biological,P11,0,1,2,P11_D0_R01,D0,P11_D0
-20240830_P11_D0_01_3,Biological,P11,0,1,3,P11_D0_R01,D0,P11_D0
-20240830_P11_D0_02_1,Biological,P11,0,2,1,P11_D0_R02,D0,P11_D0
-20240830_P11_D0_02_2,Biological,P11,0,2,2,P11_D0_R02,D0,P11_D0
-20240830_P11_D0_02_3,Biological,P11,0,2,3,P11_D0_R02,D0,P11_D0
-20240830_P11_D0_03_1,Biological,P11,0,3,1,P11_D0_R03,D0,P11_D0
-20240830_P11_D0_03_2,Biological,P11,0,3,2,P11_D0_R03,D0,P11_D0
-20240830_P11_D0_03_3,Biological,P11,0,3,3,P11_D0_R03,D0,P11_D0
-20240830_P11_D1_01_1,Biological,P11,1,1,1,P11_D1_R01,D1,P11_D1
-20240830_P11_D1_01_2,Biological,P11,1,1,2,P11_D1_R01,D1,P11_D1
-20240830_P11_D1_01_3,Biological,P11,1,1,3,P11_D1_R01,D1,P11_D1
-20240830_P11_D1_02_1,Biological,P11,1,2,1,P11_D1_R02,D1,P11_D1
-20240830_P11_D1_02_2,Biological,P11,1,2,2,P11_D1_R02,D1,P11_D1
-20240830_P11_D1_02_3,Biological,P11,1,2,3,P11_D1_R02,D1,P11_D1
-20240830_P11_D1_03_1,Biological,P11,1,3,1,P11_D1_R03,D1,P11_D1
-20240830_P11_D1_03_2,Biological,P11,1,3,2,P11_D1_R03,D1,P11_D1
-20240830_P11_D1_03_3,Biological,P11,1,3,3,P11_D1_R03,D1,P11_D1
-20240830_P11_D3_01_1,Biological,P11,3,1,1,P11_D3_R01,D3,P11_D3
-20240830_P11_D3_01_2,Biological,P11,3,1,2,P11_D3_R01,D3,P11_D3
-20240830_P11_D3_01_3,Biological,P11,3,1,3,P11_D3_R01,D3,P11_D3
-20240830_P11_D3_02_1,Biological,P11,3,2,1,P11_D3_R02,D3,P11_D3
-20240830_P11_D3_02_2,Biological,P11,3,2,2,P11_D3_R02,D3,P11_D3
-20240830_P11_D3_02_3,Biological,P11,3,2,3,P11_D3_R02,D3,P11_D3
-20240830_P11_D3_03_1,Biological,P11,3,3,1,P11_D3_R03,D3,P11_D3
-20240830_P11_D3_03_2,Biological,P11,3,3,2,P11_D3_R03,D3,P11_D3
-20240830_P11_D3_03_3,Biological,P11,3,3,3,P11_D3_R03,D3,P11_D3
-20240830_P11_D6_01_1,Biological,P11,6,1,1,P11_D6_R01,D6,P11_D6
-20240830_P11_D6_01_2,Biological,P11,6,1,2,P11_D6_R01,D6,P11_D6
-20240830_P11_D6_01_3,Biological,P11,6,1,3,P11_D6_R01,D6,P11_D6
-20240830_P11_D6_02_1,Biological,P11,6,2,1,P11_D6_R02,D6,P11_D6
-20240830_P11_D6_02_2,Biological,P11,6,2,2,P11_D6_R02,D6,P11_D6
-20240830_P11_D6_02_3,Biological,P11,6,2,3,P11_D6_R02,D6,P11_D6
-20240830_P11_D6_03_1,Biological,P11,6,3,1,P11_D6_R03,D6,P11_D6
-20240830_P11_D6_03_2,Biological,P11,6,3,2,P11_D6_R03,D6,P11_D6
-20240830_P11_D6_03_3,Biological,P11,6,3,3,P11_D6_R03,D6,P11_D6
-20240830_P11_D9_01_1,Biological,P11,9,1,1,P11_D9_R01,D9,P11_D9
-20240830_P11_D9_01_2,Biological,P11,9,1,2,P11_D9_R01,D9,P11_D9
-20240830_P11_D9_01_3,Biological,P11,9,1,3,P11_D9_R01,D9,P11_D9
-20240830_P11_D9_02_1,Biological,P11,9,2,1,P11_D9_R02,D9,P11_D9
-20240830_P11_D9_02_2,Biological,P11,9,2,2,P11_D9_R02,D9,P11_D9
-20240830_P11_D9_02_3,Biological,P11,9,2,3,P11_D9_R02,D9,P11_D9
-20240830_P11_D9_03_1,Biological,P11,9,3,1,P11_D9_R03,D9,P11_D9
-20240830_P11_D9_03_2,Biological,P11,9,3,2,P11_D9_R03,D9,P11_D9
-20240830_P11_D9_03_3,Biological,P11,9,3,3,P11_D9_R03,D9,P11_D9
-20240830_P22_D0_01_1,Biological,P22,0,1,1,P22_D0_R01,D0,P22_D0
-20240830_P22_D0_01_2,Biological,P22,0,1,2,P22_D0_R01,D0,P22_D0
-20240830_P22_D0_01_3,Biological,P22,0,1,3,P22_D0_R01,D0,P22_D0
-20240830_P22_D0_02_1,Biological,P22,0,2,1,P22_D0_R02,D0,P22_D0
-20240830_P22_D0_02_2,Biological,P22,0,2,2,P22_D0_R02,D0,P22_D0
-20240830_P22_D0_02_3,Biological,P22,0,2,3,P22_D0_R02,D0,P22_D0
-20240830_P22_D0_03_1,Biological,P22,0,3,1,P22_D0_R03,D0,P22_D0
-20240830_P22_D0_03_2,Biological,P22,0,3,2,P22_D0_R03,D0,P22_D0
-20240830_P22_D0_03_3,Biological,P22,0,3,3,P22_D0_R03,D0,P22_D0
-20240830_P22_D1_01_1,Biological,P22,1,1,1,P22_D1_R01,D1,P22_D1
-20240830_P22_D1_01_2,Biological,P22,1,1,2,P22_D1_R01,D1,P22_D1
-20240830_P22_D1_01_3,Biological,P22,1,1,3,P22_D1_R01,D1,P22_D1
-20240830_P22_D1_02_1,Biological,P22,1,2,1,P22_D1_R02,D1,P22_D1
-20240830_P22_D1_02_2,Biological,P22,1,2,2,P22_D1_R02,D1,P22_D1
-20240830_P22_D1_02_3,Biological,P22,1,2,3,P22_D1_R02,D1,P22_D1
-20240830_P22_D1_03_1,Biological,P22,1,3,1,P22_D1_R03,D1,P22_D1
-20240830_P22_D1_03_2,Biological,P22,1,3,2,P22_D1_R03,D1,P22_D1
-20240830_P22_D1_03_3,Biological,P22,1,3,3,P22_D1_R03,D1,P22_D1
-20240830_P22_D3_01_1,Biological,P22,3,1,1,P22_D3_R01,D3,P22_D3
-20240830_P22_D3_01_2,Biological,P22,3,1,2,P22_D3_R01,D3,P22_D3
-20240830_P22_D3_01_3,Biological,P22,3,1,3,P22_D3_R01,D3,P22_D3
-20240830_P22_D3_02_1,Biological,P22,3,2,1,P22_D3_R02,D3,P22_D3
-20240830_P22_D3_02_2,Biological,P22,3,2,2,P22_D3_R02,D3,P22_D3
-20240830_P22_D3_02_3,Biological,P22,3,2,3,P22_D3_R02,D3,P22_D3
-20240830_P22_D3_03_1,Biological,P22,3,3,1,P22_D3_R03,D3,P22_D3
-20240830_P22_D3_03_2,Biological,P22,3,3,2,P22_D3_R03,D3,P22_D3
-20240830_P22_D3_03_3,Biological,P22,3,3,3,P22_D3_R03,D3,P22_D3
-20240830_P22_D6_01_1,Biological,P22,6,1,1,P22_D6_R01,D6,P22_D6
-20240830_P22_D6_01_2,Biological,P22,6,1,2,P22_D6_R01,D6,P22_D6
-20240830_P22_D6_01_3,Biological,P22,6,1,3,P22_D6_R01,D6,P22_D6
-20240830_P22_D6_02_1,Biological,P22,6,2,1,P22_D6_R02,D6,P22_D6
-20240830_P22_D6_02_2,Biological,P22,6,2,2,P22_D6_R02,D6,P22_D6
-20240830_P22_D6_02_3,Biological,P22,6,2,3,P22_D6_R02,D6,P22_D6
-20240830_P22_D6_03_1,Biological,P22,6,3,1,P22_D6_R03,D6,P22_D6
-20240830_P22_D6_03_2,Biological,P22,6,3,2,P22_D6_R03,D6,P22_D6
-20240830_P22_D6_03_3,Biological,P22,6,3,3,P22_D6_R03,D6,P22_D6
-20240830_P22_D9_01_1,Biological,P22,9,1,1,P22_D9_R01,D9,P22_D9
-20240830_P22_D9_01_2,Biological,P22,9,1,2,P22_D9_R01,D9,P22_D9
-20240830_P22_D9_01_3,Biological,P22,9,1,3,P22_D9_R01,D9,P22_D9
-20240830_P22_D9_02_1,Biological,P22,9,2,1,P22_D9_R02,D9,P22_D9
-20240830_P22_D9_02_2,Biological,P22,9,2,2,P22_D9_R02,D9,P22_D9
-20240830_P22_D9_02_3,Biological,P22,9,2,3,P22_D9_R02,D9,P22_D9
-20240830_P22_D9_03_1,Biological,P22,9,3,1,P22_D9_R03,D9,P22_D9
-20240830_P22_D9_03_2,Biological,P22,9,3,2,P22_D9_R03,D9,P22_D9
-20240830_P22_D9_03_3,Biological,P22,9,3,3,P22_D9_R03,D9,P22_D9
-20240830_P33_D0_01_1,Biological,P33,0,1,1,P33_D0_R01,D0,P33_D0
-20240830_P33_D0_01_2,Biological,P33,0,1,2,P33_D0_R01,D0,P33_D0
-20240830_P33_D0_01_3,Biological,P33,0,1,3,P33_D0_R01,D0,P33_D0
-20240830_P33_D0_02_1,Biological,P33,0,2,1,P33_D0_R02,D0,P33_D0
-20240830_P33_D0_02_2,Biological,P33,0,2,2,P33_D0_R02,D0,P33_D0
-20240830_P33_D0_02_3,Biological,P33,0,2,3,P33_D0_R02,D0,P33_D0
-20240830_P33_D0_03_1,Biological,P33,0,3,1,P33_D0_R03,D0,P33_D0
-20240830_P33_D0_03_2,Biological,P33,0,3,2,P33_D0_R03,D0,P33_D0
-20240830_P33_D0_03_3,Biological,P33,0,3,3,P33_D0_R03,D0,P33_D0
-20240830_P33_D1_01_1,Biological,P33,1,1,1,P33_D1_R01,D1,P33_D1
-20240830_P33_D1_01_2,Biological,P33,1,1,2,P33_D1_R01,D1,P33_D1
-20240830_P33_D1_01_3,Biological,P33,1,1,3,P33_D1_R01,D1,P33_D1
-20240830_P33_D1_02_1,Biological,P33,1,2,1,P33_D1_R02,D1,P33_D1
-20240830_P33_D1_02_2,Biological,P33,1,2,2,P33_D1_R02,D1,P33_D1
-20240830_P33_D1_02_3,Biological,P33,1,2,3,P33_D1_R02,D1,P33_D1
-20240830_P33_D1_03_1,Biological,P33,1,3,1,P33_D1_R03,D1,P33_D1
-20240830_P33_D1_03_2,Biological,P33,1,3,2,P33_D1_R03,D1,P33_D1
-20240830_P33_D1_03_3,Biological,P33,1,3,3,P33_D1_R03,D1,P33_D1
-20240830_P33_D3_01_1,Biological,P33,3,1,1,P33_D3_R01,D3,P33_D3
-20240830_P33_D3_01_2,Biological,P33,3,1,2,P33_D3_R01,D3,P33_D3
-20240830_P33_D3_01_3,Biological,P33,3,1,3,P33_D3_R01,D3,P33_D3
-20240830_P33_D3_02_1,Biological,P33,3,2,1,P33_D3_R02,D3,P33_D3
-20240830_P33_D3_02_2,Biological,P33,3,2,2,P33_D3_R02,D3,P33_D3
-20240830_P33_D3_02_3,Biological,P33,3,2,3,P33_D3_R02,D3,P33_D3
-20240830_P33_D3_03_1,Biological,P33,3,3,1,P33_D3_R03,D3,P33_D3
-20240830_P33_D3_03_2,Biological,P33,3,3,2,P33_D3_R03,D3,P33_D3
-20240830_P33_D3_03_3,Biological,P33,3,3,3,P33_D3_R03,D3,P33_D3
-20240830_P33_D6_01_1,Biological,P33,6,1,1,P33_D6_R01,D6,P33_D6
-20240830_P33_D6_01_2,Biological,P33,6,1,2,P33_D6_R01,D6,P33_D6
-20240830_P33_D6_01_3,Biological,P33,6,1,3,P33_D6_R01,D6,P33_D6
-20240830_P33_D6_02_1,Biological,P33,6,2,1,P33_D6_R02,D6,P33_D6
-20240830_P33_D6_02_2,Biological,P33,6,2,2,P33_D6_R02,D6,P33_D6
-20240830_P33_D6_02_3,Biological,P33,6,2,3,P33_D6_R02,D6,P33_D6
-20240830_P33_D6_03_1,Biological,P33,6,3,1,P33_D6_R03,D6,P33_D6
-20240830_P33_D6_03_2,Biological,P33,6,3,2,P33_D6_R03,D6,P33_D6
-20240830_P33_D6_03_3,Biological,P33,6,3,3,P33_D6_R03,D6,P33_D6
-20240830_P33_D9_01_1,Biological,P33,9,1,1,P33_D9_R01,D9,P33_D9
-20240830_P33_D9_01_2,Biological,P33,9,1,2,P33_D9_R01,D9,P33_D9
-20240830_P33_D9_01_3,Biological,P33,9,1,3,P33_D9_R01,D9,P33_D9
-20240830_P33_D9_02_1,Biological,P33,9,2,1,P33_D9_R02,D9,P33_D9
-20240830_P33_D9_02_2,Biological,P33,9,2,2,P33_D9_R02,D9,P33_D9
-20240830_P33_D9_02_3,Biological,P33,9,2,3,P33_D9_R02,D9,P33_D9
-20240830_P33_D9_03_1,Biological,P33,9,3,1,P33_D9_R03,D9,P33_D9
-20240830_P33_D9_03_2,Biological,P33,9,3,2,P33_D9_R03,D9,P33_D9
-20240830_P33_D9_03_3,Biological,P33,9,3,3,P33_D9_R03,D9,P33_D9
-20240830_QC_1,QC,,,,,,,
-20240830_QC_2,QC,,,,,,,
-20240830_QC_3,QC,,,,,,,
-20240830_QC_4,QC,,,,,,,
-20240830_QC_5,QC,,,,,,,
-20240830_QC_6,QC,,,,,,,
-20240830_QC_7,QC,,,,,,,
-20240830_QC_8,QC,,,,,,,
-20240830_QC_9,QC,,,,,,,
-20240830_QC_10,QC,,,,,,,
+﻿sample_type,passage,day_numeric,biological_replicate,injection_replicate,biological_sample,day,condition,injection
+Biological,Early Passage,0,1,1,Early_Passage_D0_R01,D0,Early_D0,Early_Passage_D0_R01_I01
+Biological,Early Passage,0,1,2,Early_Passage_D0_R01,D0,Early_D0,Early_Passage_D0_R01_I02
+Biological,Early Passage,0,1,3,Early_Passage_D0_R01,D0,Early_D0,Early_Passage_D0_R01_I03
+Biological,Early Passage,0,2,1,Early_Passage_D0_R02,D0,Early_D0,Early_Passage_D0_R02_I01
+Biological,Early Passage,0,2,2,Early_Passage_D0_R02,D0,Early_D0,Early_Passage_D0_R02_I02
+Biological,Early Passage,0,2,3,Early_Passage_D0_R02,D0,Early_D0,Early_Passage_D0_R02_I03
+Biological,Early Passage,0,3,1,Early_Passage_D0_R03,D0,Early_D0,Early_Passage_D0_R03_I01
+Biological,Early Passage,0,3,2,Early_Passage_D0_R03,D0,Early_D0,Early_Passage_D0_R03_I02
+Biological,Early Passage,0,3,3,Early_Passage_D0_R03,D0,Early_D0,Early_Passage_D0_R03_I03
+Biological,Early Passage,1,1,1,Early_Passage_D1_R01,D1,Early_D1,Early_Passage_D1_R01_I01
+Biological,Early Passage,1,1,2,Early_Passage_D1_R01,D1,Early_D1,Early_Passage_D1_R01_I02
+Biological,Early Passage,1,1,3,Early_Passage_D1_R01,D1,Early_D1,Early_Passage_D1_R01_I03
+Biological,Early Passage,1,2,1,Early_Passage_D1_R02,D1,Early_D1,Early_Passage_D1_R02_I01
+Biological,Early Passage,1,2,2,Early_Passage_D1_R02,D1,Early_D1,Early_Passage_D1_R02_I02
+Biological,Early Passage,1,2,3,Early_Passage_D1_R02,D1,Early_D1,Early_Passage_D1_R02_I03
+Biological,Early Passage,1,3,1,Early_Passage_D1_R03,D1,Early_D1,Early_Passage_D1_R03_I01
+Biological,Early Passage,1,3,2,Early_Passage_D1_R03,D1,Early_D1,Early_Passage_D1_R03_I02
+Biological,Early Passage,1,3,3,Early_Passage_D1_R03,D1,Early_D1,Early_Passage_D1_R03_I03
+Biological,Early Passage,3,1,1,Early_Passage_D3_R01,D3,Early_D3,Early_Passage_D3_R01_I01
+Biological,Early Passage,3,1,2,Early_Passage_D3_R01,D3,Early_D3,Early_Passage_D3_R01_I02
+Biological,Early Passage,3,1,3,Early_Passage_D3_R01,D3,Early_D3,Early_Passage_D3_R01_I03
+Biological,Early Passage,3,2,1,Early_Passage_D3_R02,D3,Early_D3,Early_Passage_D3_R02_I01
+Biological,Early Passage,3,2,2,Early_Passage_D3_R02,D3,Early_D3,Early_Passage_D3_R02_I02
+Biological,Early Passage,3,2,3,Early_Passage_D3_R02,D3,Early_D3,Early_Passage_D3_R02_I03
+Biological,Early Passage,3,3,1,Early_Passage_D3_R03,D3,Early_D3,Early_Passage_D3_R03_I01
+Biological,Early Passage,3,3,2,Early_Passage_D3_R03,D3,Early_D3,Early_Passage_D3_R03_I02
+Biological,Early Passage,3,3,3,Early_Passage_D3_R03,D3,Early_D3,Early_Passage_D3_R03_I03
+Biological,Early Passage,6,1,1,Early_Passage_D6_R01,D6,Early_D6,Early_Passage_D6_R01_I01
+Biological,Early Passage,6,1,2,Early_Passage_D6_R01,D6,Early_D6,Early_Passage_D6_R01_I02
+Biological,Early Passage,6,1,3,Early_Passage_D6_R01,D6,Early_D6,Early_Passage_D6_R01_I03
+Biological,Early Passage,6,2,1,Early_Passage_D6_R02,D6,Early_D6,Early_Passage_D6_R02_I01
+Biological,Early Passage,6,2,2,Early_Passage_D6_R02,D6,Early_D6,Early_Passage_D6_R02_I02
+Biological,Early Passage,6,2,3,Early_Passage_D6_R02,D6,Early_D6,Early_Passage_D6_R02_I03
+Biological,Early Passage,6,3,1,Early_Passage_D6_R03,D6,Early_D6,Early_Passage_D6_R03_I01
+Biological,Early Passage,6,3,2,Early_Passage_D6_R03,D6,Early_D6,Early_Passage_D6_R03_I02
+Biological,Early Passage,6,3,3,Early_Passage_D6_R03,D6,Early_D6,Early_Passage_D6_R03_I03
+Biological,Early Passage,9,1,1,Early_Passage_D9_R01,D9,Early_D9,Early_Passage_D9_R01_I01
+Biological,Early Passage,9,1,2,Early_Passage_D9_R01,D9,Early_D9,Early_Passage_D9_R01_I02
+Biological,Early Passage,9,1,3,Early_Passage_D9_R01,D9,Early_D9,Early_Passage_D9_R01_I03
+Biological,Early Passage,9,2,1,Early_Passage_D9_R02,D9,Early_D9,Early_Passage_D9_R02_I01
+Biological,Early Passage,9,2,2,Early_Passage_D9_R02,D9,Early_D9,Early_Passage_D9_R02_I02
+Biological,Early Passage,9,2,3,Early_Passage_D9_R02,D9,Early_D9,Early_Passage_D9_R02_I03
+Biological,Early Passage,9,3,1,Early_Passage_D9_R03,D9,Early_D9,Early_Passage_D9_R03_I01
+Biological,Early Passage,9,3,2,Early_Passage_D9_R03,D9,Early_D9,Early_Passage_D9_R03_I02
+Biological,Early Passage,9,3,3,Early_Passage_D9_R03,D9,Early_D9,Early_Passage_D9_R03_I03
+Biological,Middle Passage,0,1,1,Middle_Passage_D0_R01,D0,Middle_D0,Middle_Passage_D0_R01_I01
+Biological,Middle Passage,0,1,2,Middle_Passage_D0_R01,D0,Middle_D0,Middle_Passage_D0_R01_I02
+Biological,Middle Passage,0,1,3,Middle_Passage_D0_R01,D0,Middle_D0,Middle_Passage_D0_R01_I03
+Biological,Middle Passage,0,2,1,Middle_Passage_D0_R02,D0,Middle_D0,Middle_Passage_D0_R02_I01
+Biological,Middle Passage,0,2,2,Middle_Passage_D0_R02,D0,Middle_D0,Middle_Passage_D0_R02_I02
+Biological,Middle Passage,0,2,3,Middle_Passage_D0_R02,D0,Middle_D0,Middle_Passage_D0_R02_I03
+Biological,Middle Passage,0,3,1,Middle_Passage_D0_R03,D0,Middle_D0,Middle_Passage_D0_R03_I01
+Biological,Middle Passage,0,3,2,Middle_Passage_D0_R03,D0,Middle_D0,Middle_Passage_D0_R03_I02
+Biological,Middle Passage,0,3,3,Middle_Passage_D0_R03,D0,Middle_D0,Middle_Passage_D0_R03_I03
+Biological,Middle Passage,1,1,1,Middle_Passage_D1_R01,D1,Middle_D1,Middle_Passage_D1_R01_I01
+Biological,Middle Passage,1,1,2,Middle_Passage_D1_R01,D1,Middle_D1,Middle_Passage_D1_R01_I02
+Biological,Middle Passage,1,1,3,Middle_Passage_D1_R01,D1,Middle_D1,Middle_Passage_D1_R01_I03
+Biological,Middle Passage,1,2,1,Middle_Passage_D1_R02,D1,Middle_D1,Middle_Passage_D1_R02_I01
+Biological,Middle Passage,1,2,2,Middle_Passage_D1_R02,D1,Middle_D1,Middle_Passage_D1_R02_I02
+Biological,Middle Passage,1,2,3,Middle_Passage_D1_R02,D1,Middle_D1,Middle_Passage_D1_R02_I03
+Biological,Middle Passage,1,3,1,Middle_Passage_D1_R03,D1,Middle_D1,Middle_Passage_D1_R03_I01
+Biological,Middle Passage,1,3,2,Middle_Passage_D1_R03,D1,Middle_D1,Middle_Passage_D1_R03_I02
+Biological,Middle Passage,1,3,3,Middle_Passage_D1_R03,D1,Middle_D1,Middle_Passage_D1_R03_I03
+Biological,Middle Passage,3,1,1,Middle_Passage_D3_R01,D3,Middle_D3,Middle_Passage_D3_R01_I01
+Biological,Middle Passage,3,1,2,Middle_Passage_D3_R01,D3,Middle_D3,Middle_Passage_D3_R01_I02
+Biological,Middle Passage,3,1,3,Middle_Passage_D3_R01,D3,Middle_D3,Middle_Passage_D3_R01_I03
+Biological,Middle Passage,3,2,1,Middle_Passage_D3_R02,D3,Middle_D3,Middle_Passage_D3_R02_I01
+Biological,Middle Passage,3,2,2,Middle_Passage_D3_R02,D3,Middle_D3,Middle_Passage_D3_R02_I02
+Biological,Middle Passage,3,2,3,Middle_Passage_D3_R02,D3,Middle_D3,Middle_Passage_D3_R02_I03
+Biological,Middle Passage,3,3,1,Middle_Passage_D3_R03,D3,Middle_D3,Middle_Passage_D3_R03_I01
+Biological,Middle Passage,3,3,2,Middle_Passage_D3_R03,D3,Middle_D3,Middle_Passage_D3_R03_I02
+Biological,Middle Passage,3,3,3,Middle_Passage_D3_R03,D3,Middle_D3,Middle_Passage_D3_R03_I03
+Biological,Middle Passage,6,1,1,Middle_Passage_D6_R01,D6,Middle_D6,Middle_Passage_D6_R01_I01
+Biological,Middle Passage,6,1,2,Middle_Passage_D6_R01,D6,Middle_D6,Middle_Passage_D6_R01_I02
+Biological,Middle Passage,6,1,3,Middle_Passage_D6_R01,D6,Middle_D6,Middle_Passage_D6_R01_I03
+Biological,Middle Passage,6,2,1,Middle_Passage_D6_R02,D6,Middle_D6,Middle_Passage_D6_R02_I01
+Biological,Middle Passage,6,2,2,Middle_Passage_D6_R02,D6,Middle_D6,Middle_Passage_D6_R02_I02
+Biological,Middle Passage,6,2,3,Middle_Passage_D6_R02,D6,Middle_D6,Middle_Passage_D6_R02_I03
+Biological,Middle Passage,6,3,1,Middle_Passage_D6_R03,D6,Middle_D6,Middle_Passage_D6_R03_I01
+Biological,Middle Passage,6,3,2,Middle_Passage_D6_R03,D6,Middle_D6,Middle_Passage_D6_R03_I02
+Biological,Middle Passage,6,3,3,Middle_Passage_D6_R03,D6,Middle_D6,Middle_Passage_D6_R03_I03
+Biological,Middle Passage,9,1,1,Middle_Passage_D9_R01,D9,Middle_D9,Middle_Passage_D9_R01_I01
+Biological,Middle Passage,9,1,2,Middle_Passage_D9_R01,D9,Middle_D9,Middle_Passage_D9_R01_I02
+Biological,Middle Passage,9,1,3,Middle_Passage_D9_R01,D9,Middle_D9,Middle_Passage_D9_R01_I03
+Biological,Middle Passage,9,2,1,Middle_Passage_D9_R02,D9,Middle_D9,Middle_Passage_D9_R02_I01
+Biological,Middle Passage,9,2,2,Middle_Passage_D9_R02,D9,Middle_D9,Middle_Passage_D9_R02_I02
+Biological,Middle Passage,9,2,3,Middle_Passage_D9_R02,D9,Middle_D9,Middle_Passage_D9_R02_I03
+Biological,Middle Passage,9,3,1,Middle_Passage_D9_R03,D9,Middle_D9,Middle_Passage_D9_R03_I01
+Biological,Middle Passage,9,3,2,Middle_Passage_D9_R03,D9,Middle_D9,Middle_Passage_D9_R03_I02
+Biological,Middle Passage,9,3,3,Middle_Passage_D9_R03,D9,Middle_D9,Middle_Passage_D9_R03_I03
+Biological,Late Passage,0,1,1,Late_Passage_D0_R01,D0,Late_D0,Late_Passage_D0_R01_I01
+Biological,Late Passage,0,1,2,Late_Passage_D0_R01,D0,Late_D0,Late_Passage_D0_R01_I02
+Biological,Late Passage,0,1,3,Late_Passage_D0_R01,D0,Late_D0,Late_Passage_D0_R01_I03
+Biological,Late Passage,0,2,1,Late_Passage_D0_R02,D0,Late_D0,Late_Passage_D0_R02_I01
+Biological,Late Passage,0,2,2,Late_Passage_D0_R02,D0,Late_D0,Late_Passage_D0_R02_I02
+Biological,Late Passage,0,2,3,Late_Passage_D0_R02,D0,Late_D0,Late_Passage_D0_R02_I03
+Biological,Late Passage,0,3,1,Late_Passage_D0_R03,D0,Late_D0,Late_Passage_D0_R03_I01
+Biological,Late Passage,0,3,2,Late_Passage_D0_R03,D0,Late_D0,Late_Passage_D0_R03_I02
+Biological,Late Passage,0,3,3,Late_Passage_D0_R03,D0,Late_D0,Late_Passage_D0_R03_I03
+Biological,Late Passage,1,1,1,Late_Passage_D1_R01,D1,Late_D1,Late_Passage_D1_R01_I01
+Biological,Late Passage,1,1,2,Late_Passage_D1_R01,D1,Late_D1,Late_Passage_D1_R01_I02
+Biological,Late Passage,1,1,3,Late_Passage_D1_R01,D1,Late_D1,Late_Passage_D1_R01_I03
+Biological,Late Passage,1,2,1,Late_Passage_D1_R02,D1,Late_D1,Late_Passage_D1_R02_I01
+Biological,Late Passage,1,2,2,Late_Passage_D1_R02,D1,Late_D1,Late_Passage_D1_R02_I02
+Biological,Late Passage,1,2,3,Late_Passage_D1_R02,D1,Late_D1,Late_Passage_D1_R02_I03
+Biological,Late Passage,1,3,1,Late_Passage_D1_R03,D1,Late_D1,Late_Passage_D1_R03_I01
+Biological,Late Passage,1,3,2,Late_Passage_D1_R03,D1,Late_D1,Late_Passage_D1_R03_I02
+Biological,Late Passage,1,3,3,Late_Passage_D1_R03,D1,Late_D1,Late_Passage_D1_R03_I03
+Biological,Late Passage,3,1,1,Late_Passage_D3_R01,D3,Late_D3,Late_Passage_D3_R01_I01
+Biological,Late Passage,3,1,2,Late_Passage_D3_R01,D3,Late_D3,Late_Passage_D3_R01_I02
+Biological,Late Passage,3,1,3,Late_Passage_D3_R01,D3,Late_D3,Late_Passage_D3_R01_I03
+Biological,Late Passage,3,2,1,Late_Passage_D3_R02,D3,Late_D3,Late_Passage_D3_R02_I01
+Biological,Late Passage,3,2,2,Late_Passage_D3_R02,D3,Late_D3,Late_Passage_D3_R02_I02
+Biological,Late Passage,3,2,3,Late_Passage_D3_R02,D3,Late_D3,Late_Passage_D3_R02_I03
+Biological,Late Passage,3,3,1,Late_Passage_D3_R03,D3,Late_D3,Late_Passage_D3_R03_I01
+Biological,Late Passage,3,3,2,Late_Passage_D3_R03,D3,Late_D3,Late_Passage_D3_R03_I02
+Biological,Late Passage,3,3,3,Late_Passage_D3_R03,D3,Late_D3,Late_Passage_D3_R03_I03
+Biological,Late Passage,6,1,1,Late_Passage_D6_R01,D6,Late_D6,Late_Passage_D6_R01_I01
+Biological,Late Passage,6,1,2,Late_Passage_D6_R01,D6,Late_D6,Late_Passage_D6_R01_I02
+Biological,Late Passage,6,1,3,Late_Passage_D6_R01,D6,Late_D6,Late_Passage_D6_R01_I03
+Biological,Late Passage,6,2,1,Late_Passage_D6_R02,D6,Late_D6,Late_Passage_D6_R02_I01
+Biological,Late Passage,6,2,2,Late_Passage_D6_R02,D6,Late_D6,Late_Passage_D6_R02_I02
+Biological,Late Passage,6,2,3,Late_Passage_D6_R02,D6,Late_D6,Late_Passage_D6_R02_I03
+Biological,Late Passage,6,3,1,Late_Passage_D6_R03,D6,Late_D6,Late_Passage_D6_R03_I01
+Biological,Late Passage,6,3,2,Late_Passage_D6_R03,D6,Late_D6,Late_Passage_D6_R03_I02
+Biological,Late Passage,6,3,3,Late_Passage_D6_R03,D6,Late_D6,Late_Passage_D6_R03_I03
+Biological,Late Passage,9,1,1,Late_Passage_D9_R01,D9,Late_D9,Late_Passage_D9_R01_I01
+Biological,Late Passage,9,1,2,Late_Passage_D9_R01,D9,Late_D9,Late_Passage_D9_R01_I02
+Biological,Late Passage,9,1,3,Late_Passage_D9_R01,D9,Late_D9,Late_Passage_D9_R01_I03
+Biological,Late Passage,9,2,1,Late_Passage_D9_R02,D9,Late_D9,Late_Passage_D9_R02_I01
+Biological,Late Passage,9,2,2,Late_Passage_D9_R02,D9,Late_D9,Late_Passage_D9_R02_I02
+Biological,Late Passage,9,2,3,Late_Passage_D9_R02,D9,Late_D9,Late_Passage_D9_R02_I03
+Biological,Late Passage,9,3,1,Late_Passage_D9_R03,D9,Late_D9,Late_Passage_D9_R03_I01
+Biological,Late Passage,9,3,2,Late_Passage_D9_R03,D9,Late_D9,Late_Passage_D9_R03_I02
+Biological,Late Passage,9,3,3,Late_Passage_D9_R03,D9,Late_D9,Late_Passage_D9_R03_I03
+QC,,,,,,,,Pooled_QC_01
+QC,,,,,,,,Pooled_QC_02
+QC,,,,,,,,Pooled_QC_03
+QC,,,,,,,,Pooled_QC_04
+QC,,,,,,,,Pooled_QC_05
+QC,,,,,,,,Pooled_QC_06
+QC,,,,,,,,Pooled_QC_07
+QC,,,,,,,,Pooled_QC_08
+QC,,,,,,,,Pooled_QC_09
+QC,,,,,,,,Pooled_QC_10

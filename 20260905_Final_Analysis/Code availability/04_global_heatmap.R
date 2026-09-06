@@ -54,6 +54,13 @@ heatmap_matrix <- heatmap_matrix[
   heatmap_metadata$biological_sample,
   drop = FALSE
 ]
+heatmap_metadata[, passage_short := factor(
+  sub(" Passage$", " P.", as.character(passage)),
+  levels = c("Early P.", "Middle P.", "Late P.")
+)]
+heatmap_metadata[, figure_sample := sprintf(
+  "%s · %s · R%02d", passage_short, day, biological_replicate
+)]
 
 heatmap_feature_table <- selected_results[
   match(rownames(heatmap_matrix), met_id),
@@ -114,9 +121,13 @@ passage_colors <- c(
 day_colors <- c(D0 = "#D9D9D9", D1 = "#7FC97F", D3 = "#BEAED4", D6 = "#FDCDAC", D9 = "#FFFF99")
 column_annotation <- HeatmapAnnotation(
   Day = heatmap_metadata$day,
-  Passage = heatmap_metadata$passage_group,
+  Passage = heatmap_metadata$passage,
   col = list(Day = day_colors, Passage = passage_colors),
-  annotation_name_gp = grid::gpar(fontsize = 9)
+  annotation_name_gp = grid::gpar(fontsize = 11, fontface = "bold"),
+  annotation_legend_param = list(
+    Day = list(title_gp = grid::gpar(fontsize = 11, fontface = "bold"), labels_gp = grid::gpar(fontsize = 10, fontface = "bold")),
+    Passage = list(title_gp = grid::gpar(fontsize = 11, fontface = "bold"), labels_gp = grid::gpar(fontsize = 10, fontface = "bold"))
+  )
 )
 
 heatmap_object <- row_annotation + Heatmap(
@@ -124,17 +135,22 @@ heatmap_object <- row_annotation + Heatmap(
   name = "Row Z-score",
   col = colorRamp2(c(-2, 0, 2), c("#2166AC", "#F7F7F7", "#B2182B")),
   top_annotation = column_annotation,
-  column_split = heatmap_metadata$passage_group,
+  column_split = heatmap_metadata$passage,
   cluster_rows = TRUE,
   cluster_columns = FALSE,
   clustering_distance_rows = "euclidean",
   clustering_method_rows = "complete",
   show_row_names = TRUE,
   row_labels = feature_annotation$figure_label,
-  row_names_gp = grid::gpar(fontsize = 6.5, fontface = "bold"),
+  row_names_gp = grid::gpar(fontsize = 7.5, fontface = "bold"),
   show_column_names = TRUE,
-  column_names_gp = grid::gpar(fontsize = 6.5, fontface = "bold"),
-  column_title_gp = grid::gpar(fontsize = 11, fontface = "bold"),
+  column_labels = heatmap_metadata$figure_sample,
+  column_names_gp = grid::gpar(fontsize = 7.5, fontface = "bold"),
+  column_title_gp = grid::gpar(fontsize = 13, fontface = "bold"),
+  heatmap_legend_param = list(
+    title_gp = grid::gpar(fontsize = 11, fontface = "bold"),
+    labels_gp = grid::gpar(fontsize = 10, fontface = "bold")
+  ),
   use_raster = TRUE,
   raster_quality = 3,
   border = FALSE
@@ -170,7 +186,7 @@ heatmap_column_order <- data.table(
 )
 heatmap_column_order <- merge(
   heatmap_column_order,
-  heatmap_metadata[, .(biological_sample, passage, passage_group, day, biological_replicate)],
+  heatmap_metadata[, .(biological_sample, passage, day, biological_replicate)],
   by = "biological_sample",
   all.x = TRUE,
   sort = FALSE

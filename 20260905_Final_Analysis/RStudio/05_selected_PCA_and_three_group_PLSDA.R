@@ -56,7 +56,7 @@ selected_pca_scores <- sample_metadata[
 
 selected_pca_figure <- ggplot(
   selected_pca_scores,
-  aes(PC1, PC2, color = passage_group, shape = day)
+  aes(PC1, PC2, color = passage, shape = day)
 ) +
   geom_point(size = 3.2, stroke = 0.9, fill = "white") +
   scale_color_manual(values = passage_colors) +
@@ -67,12 +67,18 @@ selected_pca_figure <- ggplot(
     color = "Passage",
     shape = "Day"
   ) +
-  theme_bw(base_size = 10) +
-  theme(panel.grid.minor = element_blank())
+  theme_bw(base_size = 13) +
+  theme(
+    panel.grid.minor = element_blank(),
+    axis.title = element_text(size = 14, face = "bold"),
+    axis.text = element_text(size = 12, face = "bold"),
+    legend.title = element_text(size = 12, face = "bold"),
+    legend.text = element_text(size = 11, face = "bold")
+  )
 
 selected_pca_by_day <- ggplot(
   selected_pca_scores,
-  aes(PC1, PC2, color = passage_group)
+  aes(PC1, PC2, color = passage)
 ) +
   geom_point(shape = 16, size = 2.8) +
   facet_wrap(~day, nrow = 1) +
@@ -82,10 +88,17 @@ selected_pca_by_day <- ggplot(
     y = sprintf("PC2 (%.1f%%)", selected_pca_variance[2]),
     color = "Passage"
   ) +
-  theme_bw(base_size = 9) +
-  theme(panel.grid.minor = element_blank())
+  theme_bw(base_size = 12) +
+  theme(
+    panel.grid.minor = element_blank(),
+    axis.title = element_text(size = 13, face = "bold"),
+    axis.text = element_text(size = 10, face = "bold"),
+    strip.text = element_text(size = 11, face = "bold"),
+    legend.title = element_text(size = 11, face = "bold"),
+    legend.text = element_text(size = 10, face = "bold")
+  )
 
-plsda_group <- droplevels(sample_metadata$passage_group)
+plsda_group <- droplevels(sample_metadata$passage)
 plsda_model <- mixOmics::plsda(
   t(analysis_pareto),
   plsda_group,
@@ -125,7 +138,7 @@ prepare_split <- function(train_index, test_index) {
 make_folds <- function() {
   folds <- integer(nrow(sample_metadata))
   strata <- interaction(
-    sample_metadata$passage_group,
+    sample_metadata$passage,
     sample_metadata$day,
     drop = TRUE
   )
@@ -226,7 +239,7 @@ plsda_figure <- ggplot(
   aes(
     pls_component_1,
     pls_component_2,
-    color = passage_group,
+    color = passage,
     shape = day
   )
 ) +
@@ -234,8 +247,8 @@ plsda_figure <- ggplot(
     aes(
       x = pls_component_1,
       y = pls_component_2,
-      color = passage_group,
-      group = passage_group
+      color = passage,
+      group = passage
     ),
     inherit.aes = FALSE,
     level = 0.95,
@@ -257,12 +270,18 @@ plsda_figure <- ggplot(
     color = "Passage",
     shape = "Day"
   ) +
-  theme_bw(base_size = 10) +
-  theme(panel.grid.minor = element_blank())
+  theme_bw(base_size = 13) +
+  theme(
+    panel.grid.minor = element_blank(),
+    axis.title = element_text(size = 14, face = "bold"),
+    axis.text = element_text(size = 12, face = "bold"),
+    legend.title = element_text(size = 12, face = "bold"),
+    legend.text = element_text(size = 11, face = "bold")
+  )
 
 plsda_by_day <- ggplot(
   plsda_scores,
-  aes(pls_component_1, pls_component_2, color = passage_group)
+  aes(pls_component_1, pls_component_2, color = passage)
 ) +
   geom_point(shape = 16, size = 2.8) +
   facet_wrap(~day, nrow = 1) +
@@ -278,8 +297,15 @@ plsda_by_day <- ggplot(
     ),
     color = "Passage"
   ) +
-  theme_bw(base_size = 9) +
-  theme(panel.grid.minor = element_blank())
+  theme_bw(base_size = 12) +
+  theme(
+    panel.grid.minor = element_blank(),
+    axis.title = element_text(size = 13, face = "bold"),
+    axis.text = element_text(size = 10, face = "bold"),
+    strip.text = element_text(size = 11, face = "bold"),
+    legend.title = element_text(size = 11, face = "bold"),
+    legend.text = element_text(size = 10, face = "bold")
+  )
 
 save_figure <- function(name, plot, width, height) {
   ggsave(

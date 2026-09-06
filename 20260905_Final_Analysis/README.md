@@ -1,6 +1,6 @@
 # C2C12 lipidomics analysis
 
-Open `RStudio/C2C12_Lipidomics_analysis.Rproj` and run `00_run_all.R`, or run Codes 01–05 in order.
+Open `RStudio/C2C12_Lipidomics_analysis.Rproj` and run `00_run_all.R`, or run Codes 01–05 in order. Passage groups are reported as Early Passage, Middle Passage and Late Passage throughout the processed data, statistical contrasts and output tables.
 
 ## Analysis workflow
 
@@ -17,6 +17,8 @@ Open `RStudio/C2C12_Lipidomics_analysis.Rproj` and run `00_run_all.R`, or run Co
 - `Figure`: complete PNG and PDF outputs.
 - `Tables`: complete CSV results and the annotation workbook.
 - `Critical`: main figures and key tables for review.
+
+All figures use enlarged bold axis, legend and annotation text. Dense heatmap sample labels use the abbreviated forms `Early P.`, `Middle P.` and `Late P.`.
 
 ## Annotation reporting
 

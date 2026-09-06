@@ -48,14 +48,14 @@ design_matrix <- model.matrix(~0 + condition, data = model_metadata)
 colnames(design_matrix) <- levels(model_metadata$condition)
 
 contrast_matrix <- makeContrasts(
-  P22_vs_P11_D1 = P22_D1 - P11_D1,
-  P33_vs_P11_D1 = P33_D1 - P11_D1,
-  P22_vs_P11_D3 = P22_D3 - P11_D3,
-  P33_vs_P11_D3 = P33_D3 - P11_D3,
-  P22_vs_P11_D6 = P22_D6 - P11_D6,
-  P33_vs_P11_D6 = P33_D6 - P11_D6,
-  P22_vs_P11_D9 = P22_D9 - P11_D9,
-  P33_vs_P11_D9 = P33_D9 - P11_D9,
+  Middle_vs_Early_D1 = Middle_D1 - Early_D1,
+  Late_vs_Early_D1 = Late_D1 - Early_D1,
+  Middle_vs_Early_D3 = Middle_D3 - Early_D3,
+  Late_vs_Early_D3 = Late_D3 - Early_D3,
+  Middle_vs_Early_D6 = Middle_D6 - Early_D6,
+  Late_vs_Early_D6 = Late_D6 - Early_D6,
+  Middle_vs_Early_D9 = Middle_D9 - Early_D9,
+  Late_vs_Early_D9 = Late_D9 - Early_D9,
   levels = design_matrix
 )
 
@@ -122,10 +122,10 @@ tested_results <- Reduce(
 )
 
 effect_columns <- colnames(contrast_matrix)
-p22_effect_columns <- paste0("P22_vs_P11_D", c(1, 3, 6, 9))
-p33_effect_columns <- paste0("P33_vs_P11_D", c(1, 3, 6, 9))
-tested_results[, mean_P22_vs_P11_log2FC := rowMeans(.SD), .SDcols = p22_effect_columns]
-tested_results[, mean_P33_vs_P11_log2FC := rowMeans(.SD), .SDcols = p33_effect_columns]
+middle_effect_columns <- paste0("Middle_vs_Early_D", c(1, 3, 6, 9))
+late_effect_columns <- paste0("Late_vs_Early_D", c(1, 3, 6, 9))
+tested_results[, mean_Middle_vs_Early_log2FC := rowMeans(.SD), .SDcols = middle_effect_columns]
+tested_results[, mean_Late_vs_Early_log2FC := rowMeans(.SD), .SDcols = late_effect_columns]
 tested_results[, average_fold_change_ratio := 2^average_post_log2FC]
 tested_results[, average_1.5_fold_pass :=
   average_fold_change_ratio >= 1.5 |

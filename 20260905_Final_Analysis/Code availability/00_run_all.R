@@ -6,7 +6,11 @@ scripts <- c(
   "05_selected_PCA_and_three_group_PLSDA.R"
 )
 
+script_directory <- getwd()
 if (!all(file.exists(scripts))) stop("Open C2C12_Lipidomics_analysis.Rproj")
-for (script in scripts) source(script, local = .GlobalEnv)
+for (script in scripts) {
+  setwd(script_directory)
+  source(script, local = .GlobalEnv)
+}
 
 cat("Lipidomics analysis completed successfully.\n")
