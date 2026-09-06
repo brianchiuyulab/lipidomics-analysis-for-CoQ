@@ -1,0 +1,15 @@
+﻿metric,value
+input_format,Progenesis QI normalized abundance
+ionization_mode,positive
+input_features,867
+biological_samples,45
+pooled_QC_injections,10
+technical_injections_per_biological_sample,3
+analysis_filter_features,485
+QC_detection_cutoff,0.8
+biological_detection_cutoff,0.666666666666667
+QC_CV_used_as_filter,FALSE
+biological_PCA_PC1_percent,48.6045109816354
+biological_PCA_PC2_percent,10.7193822867504
+pooled_QC_PCA_PC1_percent,43.4761176233076
+pooled_QC_PCA_PC2_percent,13.2633690307139

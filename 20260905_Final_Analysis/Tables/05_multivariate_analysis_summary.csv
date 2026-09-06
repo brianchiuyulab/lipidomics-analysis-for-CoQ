@@ -1,0 +1,17 @@
+﻿metric,value
+selected_PCA_features,60
+selected_PCA_PC1_percent,53.5461052497776
+selected_PCA_PC2_percent,14.261045637935
+PLSDA_target,Early Passage vs Middle Passage vs Late Passage
+PLSDA_features,485
+PLSDA_components,2
+cross_validation,balanced 3-fold; preprocessing estimated within training folds
+cross_validation_repetitions,100
+component_2_mean_accuracy,0.652222222222222
+component_2_mean_balanced_accuracy,0.652222222222222
+component_2_early_sensitivity,0.950666666666666
+component_2_middle_sensitivity,0.372
+component_2_late_sensitivity,0.634
+permutations,999
+permutation_statistic,day-stratified label permutation; balanced accuracy
+permutation_p_value,0.001

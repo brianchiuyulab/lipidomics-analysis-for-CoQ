@@ -1,0 +1,12 @@
+﻿metric,value
+input_features,867
+analysis_filter_features,485
+post_differentiation_contrasts,8
+joint_FDR_cutoff,0.05
+joint_selected_features,252
+average_effect_FDR_cutoff,0.05
+average_fold_change_cutoff,1.5
+direction_requirement,all eight contrasts must have the same sign
+post_selected_features,60
+sustained_lower_in_middle_late_vs_early_features,31
+sustained_higher_in_middle_late_vs_early_features,29

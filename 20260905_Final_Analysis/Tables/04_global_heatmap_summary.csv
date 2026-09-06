@@ -1,0 +1,8 @@
+﻿metric,value
+heatmap_features,60
+heatmap_samples,45
+row_clustering,complete linkage
+column_clustering,not clustered
+column_order,"passage, day, biological replicate"
+row_labels,MET identifiers
+row_annotation,putatively annotated versus unassigned/ambiguous
