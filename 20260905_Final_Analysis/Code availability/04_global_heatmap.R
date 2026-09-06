@@ -131,10 +131,10 @@ heatmap_object <- row_annotation + Heatmap(
   clustering_method_rows = "complete",
   show_row_names = TRUE,
   row_labels = feature_annotation$figure_label,
-  row_names_gp = grid::gpar(fontsize = 5.7),
+  row_names_gp = grid::gpar(fontsize = 6.5, fontface = "bold"),
   show_column_names = TRUE,
-  column_names_gp = grid::gpar(fontsize = 6),
-  column_title_gp = grid::gpar(fontsize = 10, fontface = "bold"),
+  column_names_gp = grid::gpar(fontsize = 6.5, fontface = "bold"),
+  column_title_gp = grid::gpar(fontsize = 11, fontface = "bold"),
   use_raster = TRUE,
   raster_quality = 3,
   border = FALSE
