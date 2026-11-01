@@ -1,0 +1,9 @@
+﻿metric,value
+raw_input_md5,0c1aa6b5304897d2178794ee9bc62a31
+features,485
+samples,45
+labels_used_to_learn_axes,TRUE
+largest_ANOVA_reconstruction_error,0.00000000000000177635683940025
+Day_loading_dot_Passage_loading,0.0715822984682066
+Day_first_component_within_Day_percent,78.6000681493918
+Passage_first_component_within_Passage_percent,69.6118981777748

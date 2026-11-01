@@ -1,25 +1,86 @@
 # C2C12 lipidomics analysis
 
-Open `RStudio/C2C12_Lipidomics_analysis.Rproj` and run `00_run_all.R`, or run Codes 01–05 in order. Passage groups are reported as Early Passage, Middle Passage and Late Passage throughout the processed data, statistical contrasts and output tables.
+Run 00_run_all.R from RStudio or Code availability. Both directories contain
+identical R scripts. Codes 01-06 reproduce the main outputs, including the
+requested original passage-model figure. Set run_exploratory <- TRUE in Code 00
+to also execute Codes 07-08.
 
-## Analysis workflow
+Private input: ../Lipidomics_normalized_abundance_positive.csv relative to this
+analysis directory; MD5 0c1aa6b5304897d2178794ee9bc62a31. The input is not published.
 
-1. `01_load_data_and_PCA.R` loads Progenesis QI normalized abundance, applies the prespecified detection filter and performs global PCA with and without pooled QC injections.
-2. `02_post_differentiation_limma.R` fits limma models to log2 normalized abundance. Final features require BH-FDR below 0.05 for the equal-weight average post-differentiation contrast, an absolute average change of at least 1.5-fold, and the same direction in all eight Middle/Late-versus-Early contrasts. The joint F-test is retained as a global screening result.
-3. `03_systematic_lipid_annotation.R` retains QI Accepted annotations and searches LIPID MAPS LMSD at 5 ppm using QI-inferred neutral mass or observed m/z with specified positive-mode adducts. The search is mass-based and does not confirm compound identity.
-4. `04_global_heatmap.R` draws the 60-feature global heatmap. Rows retain MET identifiers, with putative compound names shown in parentheses where assigned, and a putative lipid-class annotation. Detailed annotation evidence remains in the tables.
-5. `05_selected_PCA_and_three_group_PLSDA.R` performs selected-feature PCA and three-group PLS-DA with repeated cross-validation and day-stratified label permutation.
+## Requested original-model figure
 
-## Directories
+Figure/Original_PLSDA_day_horizontal_passage_vertical.png and .svg are generated
+by 06_original_passage_PLSDA.R and copied to Critical. Horizontal is negative
+original component 2 (44.3% X variance); vertical is original component 1 (8.2%).
+This is the original passage-supervised model with a display-only axis/sign
+change. The axes retain their actual PLS component identities.
 
-- `RStudio`: working analysis scripts and RStudio project.
-- `Code availability`: manuscript-ready copies of the same scripts.
-- `Figure`: complete PNG and PDF outputs.
-- `Tables`: complete CSV results and the annotation workbook.
-- `Critical`: main figures and key tables for review.
+## Workflow
 
-All figures use enlarged bold axis, legend and annotation text. Dense heatmap sample labels use the abbreviated forms `Early P.`, `Middle P.` and `Late P.`.
+1. 01_load_data_and_PCA.R: normalized-abundance import, averaging three technical
+   injections per biological sample, QC/detection filtering, half-minimum
+   imputation, log2 transform and Pareto scaling. Global models use 485 features
+   and 45 samples (3 passages x 5 Days x 3 replicates).
+2. 02_post_differentiation_limma.R: passage contrasts excluding D0. The 60 final
+   features require BH-FDR <0.05 for the equal-weight average post-differentiation
+   contrast, absolute average change >=1.5-fold, and the same direction in all
+   eight Middle/Late-versus-Early contrasts.
+3. 03_systematic_lipid_annotation.R: QI accepted annotations and LIPID MAPS
+   mass searches at 5 ppm, reported as putative annotations.
+4. 04_global_heatmap.R: 60-feature heatmap with MET IDs, putative labels and
+   lipid-class annotation.
+5. 05_selected_PCA_and_day_PLSDA.R: selected-feature PCA and Day-supervised
+   PLS-DA (D0/D1/D3/D6/D9). The PLS-DA uses all 485 features. Component 1 is
+   48.5769% and component 2 is 10.6444% X variance; outputs 05_day_PLSDA.
+6. 06_original_passage_PLSDA.R: original passage-supervised PLS-DA using the
+   same 485 features and 45 samples; requested figure above and result tables
+   named 06_original_passage_PLSDA_*.
+7. 07_exploratory_PCA_axes.R: descriptive review of PCs 1-10 and PC1-vs-PC2 /
+   PC1-vs-PC5 plots. The PC5 view was chosen after inspecting passage associations,
+   not as an independent validation. Outputs: Exploratory/PCA.
+8. 08_exploratory_ASCA_scores.R: balanced Day + passage + interaction
+   decomposition and ASCA-guided factor-focused illustration. Outputs:
+   Exploratory/ASCA. This is not global PCA or ordinary PLS-DA.
 
-## Annotation reporting
+## Validation and axis interpretation
 
-QI Accepted Compound IDs are reported as putative QI annotations. The original export does not identify the QI search database, so HMDB is not claimed. Unique LIPID MAPS exact-mass candidates are also putative. Ambiguous and unmatched results remain MET identifiers. No authentic-standard, retention-time or MS/MS confirmation is available in this dataset.
+Each PLS-DA target has separately computed 100 repetitions of balanced 3-fold
+cross-validation and 999 fixed-fold permutations. Imputation and Pareto scaling
+are fitted in training folds; the 485-feature QC/detection filter is fixed from
+the complete input. Prediction uses mixOmics max.dist. Day labels are permuted
+within passage in Code 05; passage labels within Day in Code 06.
+
+Code 06 reproduces all original saved coordinates, all CV rows and all
+permutation rows. The original passage model's two-component mean balanced CV
+accuracy is 0.652222; a separated Early group is not perfect three-class
+prediction. Both PLS-DA models retain their natural extraction order, regardless
+of display axes. Ellipses are descriptive 95% t ellipses.
+
+The true global PCA has PC1 48.6045%, PC2 10.7194%; the separate selected-feature
+PCA has PC1 53.5461%, PC2 14.2610%. PLS percentages are not PCA percentages.
+See docs/MULTIVARIATE_METHODS.md for the exploratory ASCA coordinate definitions
+and variance denominators.
+
+## Directories and requirements
+
+- RStudio: executable scripts and RStudio project.
+- Code availability: identical copies of all nine R files (00-08).
+- Figure: primary PNG/PDF outputs and requested original-model PNG/SVG.
+- Critical: selected main figures and key tables.
+- Tables: primary result tables.
+- Exploratory: explicitly exploratory diagnostics and score illustrations.
+- docs: method and synchronization notes.
+
+Local Archive discussion/history directories are excluded from GitHub.
+Earlier public versions remain in Git history. Raw abundance files and fitted
+RDS objects containing individual abundance values are not published.
+
+Packages: data.table, ggplot2, limma, mixOmics, curl, ComplexHeatmap, circlize.
+Code 03 uses LIPID MAPS web services; future external search results may differ
+from saved annotation tables. All input-dependent computations require the
+private input.
+
+Passage labels: P11 = Early, P22 = Middle, P33 = Late. QI/LIPID MAPS assignments
+are putative: the export does not establish the original QI search database,
+authentic-standard retention matching or MS/MS confirmation.

@@ -2,16 +2,30 @@
 selected_PCA_features,60
 selected_PCA_PC1_percent,53.5461052497776
 selected_PCA_PC2_percent,14.261045637935
-PLSDA_target,Early Passage vs Middle Passage vs Late Passage
+PLSDA_target,Differentiation day: D0 vs D1 vs D3 vs D6 vs D9
 PLSDA_features,485
+PLSDA_samples,45
 PLSDA_components,2
-cross_validation,balanced 3-fold; preprocessing estimated within training folds
+PLSDA_component_1_X_variance_percent,48.5768549921012
+PLSDA_component_2_X_variance_percent,10.6443892987155
+cross_validation,3-fold balanced within passage x day; preprocessing estimated in training folds
 cross_validation_repetitions,100
-component_2_mean_accuracy,0.652222222222222
-component_2_mean_balanced_accuracy,0.652222222222222
-component_2_early_sensitivity,0.950666666666666
-component_2_middle_sensitivity,0.372
-component_2_late_sensitivity,0.634
+component_1_mean_balanced_accuracy,0.399999999999999
+component_2_mean_accuracy,0.79911111111111
+component_2_mean_balanced_accuracy,0.79911111111111
+component_2_sd_balanced_accuracy,0.0271560041182568
+fixed_fold_observed_balanced_accuracy,0.822222222222222
 permutations,999
-permutation_statistic,day-stratified label permutation; balanced accuracy
+permutation_statistic,Day labels permuted within passage; fixed-fold balanced accuracy
 permutation_p_value,0.001
+seed,20260905
+mixOmics_version,6.28.0
+input_file,C:/Users/User/Desktop/學習記錄/[研究相關] 研究計畫含DATA/鄭老師肌少症計畫/實驗數據/LC-MS/Lipidomics_normalized_abundance_positive.csv
+input_md5,0c1aa6b5304897d2178794ee9bc62a31
+input_scope,All 485 QC-retained features; not the 60 differential features
+detection_filter_CV_scope,485-feature detection filter fixed from complete input; imputation/log2/Pareto fitted in training folds
+component_2_D0_sensitivity,1
+component_2_D1_sensitivity,1
+component_2_D3_sensitivity,0.747777777777777
+component_2_D6_sensitivity,0.247777777777777
+component_2_D9_sensitivity,1

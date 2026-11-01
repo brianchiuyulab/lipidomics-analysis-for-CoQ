@@ -21,7 +21,7 @@ suppressPackageStartupMessages({
 })
 
 working_directory <- getwd()
-if (basename(working_directory) == "RStudio") {
+if (basename(working_directory) %in% c("RStudio", "Code availability")) {
   analysis_root <- dirname(working_directory)
 } else if (
   dir.exists(file.path(working_directory, "Figure")) &&

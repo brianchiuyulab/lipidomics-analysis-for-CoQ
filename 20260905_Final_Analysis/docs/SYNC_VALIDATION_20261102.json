@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-02",
+  "repository": "brianchiuyulab/lipidomics-analysis-for-CoQ",
+  "input_md5": "0c1aa6b5304897d2178794ee9bc62a31",
+  "code_copies_identical": true,
+  "R_files_per_copy": 9,
+  "code_sha256": {
+    "00_run_all.R": "5fe5faad88b5c6a0c321cdc00fa07752ab2b048e5d2d2cb2db6c960dd217ce81",
+    "01_load_data_and_PCA.R": "3334bdbfc619eae6c2cfc59abea3a0138875b268af145aa75f1e7c661cc7b957",
+    "02_post_differentiation_limma.R": "2b53982713e5ab27a880c48ff8a765e00dad117047b599f59e5a814bc1e4f6ed",
+    "03_systematic_lipid_annotation.R": "f2ea415b7aa0a3919c50859efc22801ddbd27593bc2c9747ea382ca530ffdf33",
+    "04_global_heatmap.R": "353675770247e03109ce39ce95b3fff447738c7961e639b2f0ad1993015d9bd0",
+    "05_selected_PCA_and_day_PLSDA.R": "91a06b6c1110693437dd34feb0a152180faa9f0706a5e21486565a67ef3e3717",
+    "06_original_passage_PLSDA.R": "871a2a47b4f0403221ba0d37921c86426374cb882d63d852b2cfcc136bccc327",
+    "07_exploratory_PCA_axes.R": "6c08e56254b63c9599a435a2612c72dad2c3caa80c638c169094788fb2e04b4a",
+    "08_exploratory_ASCA_scores.R": "3888b992086c6b06fdaf5b62b4c2af8eeb08094ea86f4abc6281c1365eb01e5e"
+  },
+  "executed_from": "Code availability",
+  "executed_codes": [
+    "01",
+    "02",
+    "05",
+    "06",
+    "07",
+    "08"
+  ],
+  "unchanged_not_reexecuted_codes": [
+    "03",
+    "04"
+  ],
+  "original_passage_scores_max_absolute_difference": 0,
+  "original_passage_CV_200_rows_exact_match": true,
+  "original_passage_999_permutations_exact_match": true,
+  "preexisting_table_files_with_changed_bytes": [],
+  "requested_figure_matches_reviewed_PNG": true,
+  "figure_critical_identical": true,
+  "requested_figure_sha256": {
+    "png": "cba63b2155f5ef9c1ec8cdc3a51f9643eefa649458d3d79210ce46fdcb19fce4",
+    "svg": "b35c834092a39d05e730ec26c767d3c174f326ab808080934c46657db6f495ce"
+  },
+  "private_raw_input_published": false,
+  "fitted_abundance_RDS_published": false,
+  "PCA_ASCA_views_labeled_exploratory": true
+}

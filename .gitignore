@@ -3,3 +3,8 @@
 .RData
 *.inspect.ndjson
 Lipidomics_normalized_abundance_positive.csv
+
+Archive/
+*.rds
+*.RDS
+*.zip

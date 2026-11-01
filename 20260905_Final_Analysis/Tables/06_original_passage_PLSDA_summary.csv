@@ -1,0 +1,23 @@
+﻿metric,value
+PLSDA_target,Early Passage vs Middle Passage vs Late Passage
+PLSDA_features,485
+PLSDA_samples,45
+PLSDA_components,2
+PLSDA_component_1_X_variance_percent,8.21694645294234
+PLSDA_component_2_X_variance_percent,44.2533201819113
+displayed_horizontal,negative original component 2; sign convention only
+displayed_vertical,original component 1
+cross_validation,balanced 3-fold within passage x day; train-fold preprocessing
+cross_validation_repetitions,100
+component_2_mean_balanced_accuracy,0.652222222222222
+component_2_early_sensitivity,0.950666666666666
+component_2_middle_sensitivity,0.372
+component_2_late_sensitivity,0.634
+fixed_fold_observed_balanced_accuracy,0.666666666666667
+permutations,999
+permutation_statistic,Passage labels permuted within Day; fixed-fold balanced accuracy
+permutation_p_value,0.001
+seed,20260905
+mixOmics_version,6.28.0
+input_md5,0c1aa6b5304897d2178794ee9bc62a31
+detection_filter_CV_scope,485-feature filter fixed from complete input; imputation/Pareto fitted in training folds
